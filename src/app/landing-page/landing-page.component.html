@@ -1,0 +1,62 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav class="mat-elevation-z10" mode="side" opened>
+        <div class="example-button-row">
+            <ul>
+                <li>
+                    <button mat-fab extended (click)="inicio()">
+                        <mat-icon>home</mat-icon>
+                        Inicio
+                    </button>
+                </li>
+                <li>
+                    <button mat-fab extended (click)="carrusel()">
+                        <mat-icon>view_carousel</mat-icon>
+                        Carrusel
+                    </button>
+                </li>
+                <li>
+                    <button mat-fab extended (click)="empleados()">
+                        <mat-icon>people</mat-icon>
+                        Empleados
+                    </button>
+                </li>
+            </ul>
+    
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+        <mat-toolbar color="accent" class="stb">
+            <button mat-button (click)="sidenav.toggle()" class="stb">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="stb">
+                <a mat-button routerLink="/" class="stb">
+                    <mat-icon class="md-20 stb">&nbsp;biotech</mat-icon>
+                    Examen Front End - Grupo Salinas
+                </a>
+            </span>
+            <span class="example-spacer"></span>
+            <div class="stb">
+                <span>En sesión: Administrador</span>
+            </div>
+            <div>
+                <span>&nbsp;&nbsp;</span>
+            </div>
+            <div class="stb">
+                <a mat-button (click)="logOut()" type="submit" class="stb">
+                    <mat-icon>logout</mat-icon>
+                    Salir
+                </a>
+            </div>
+        </mat-toolbar>
+        <div class="content">
+            <app-empleados></app-empleados>
+            <dashboard-product></dashboard-product>            
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<footer>
+    <p>
+        This is application footer
+    </p>
+</footer>

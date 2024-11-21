@@ -1,0 +1,59 @@
+<div class="wrapper">
+    @if (!loading) {
+        <div class="body">
+            <form action="">
+                <p>&nbsp;</p>
+                <mat-card class="example-card" appearance="outlined">
+                    <mat-card-header>
+                        <mat-card-title-group>
+                            <mat-card-title>Registrar Usuario</mat-card-title>
+                            <img mat-card-sm-image src="assets/img/Login1.png">
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                            <mat-form-field appearance="outline" style="width: 47%">
+                                <mat-label>Nombre(s)</mat-label>
+                                <input matInput type="text" placeholder="Escriba su o sus nombres" id="floatingName" [(ngModel)]="name" name="name">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" style="width: 47%">
+                                <mat-label>Apellido(s)</mat-label>
+                                <input matInput type="text" placeholder="Escriba su o sus apellidos" id="floatingLastname" [(ngModel)]="lastname" name="lastname">
+                            </mat-form-field>
+                        </div>
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Correo Electrónico</mat-label>
+                            <input matInput type="email" placeholder="nombre@ejemplo.com" id="floatingEmail" [(ngModel)]="email" name="email">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Usuario</mat-label>
+                            <input matInput type="text" placeholder="Anote una clave de usuario" id="floatingCredential" [(ngModel)]="credential" name="credential">
+                        </mat-form-field>
+                        <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                            <mat-form-field appearance="outline" style="width: 47%">
+                                <mat-label>Contraseña</mat-label>
+                                <input matInput type="password" placeholder="Escriba la contraseña" id="floatingPassword" [(ngModel)]="password" name="password">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" style="width: 47%">
+                                <mat-label>Repetir Contraseña</mat-label>
+                                <input matInput type="password" placeholder="Repita la contraseña" id="floatingRepeatPassword" [(ngModel)]="repeatPassword" name="repeatPassword">
+                            </mat-form-field>
+                        </div>
+                        <p>&nbsp;</p>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions align="end">
+                        <button mat-raised-button color="primary" (click)="addUser()" type="submit">Enviar Registro</button>
+                    </mat-card-actions>
+                </mat-card>
+                <div>
+                    <p>¡Ya tengo cuenta! <a (click)="backLogin()">Iniciar Sesión</a></p>
+                </div>
+            </form>
+        </div>
+    } @else if (loading) {
+        <app-spinner></app-spinner>
+    }
+    <!-- <app-spinner *ngIf="loading"></app-spinner> -->
+</div>

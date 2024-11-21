@@ -1,0 +1,89 @@
+html,
+.body {
+    text-align: center;
+    width: 20%;
+    margin: 5% 0% 21.7% 30%;
+    @media (max-width: 30em) {
+        text-align: center;
+        width: auto;
+        margin: auto 0;
+        min-height: 912px;
+    }
+    color: green;
+}
+
+a {
+    cursor: pointer;
+}
+
+mat-form-field {
+    background-color: #fff !important;
+    border-radius: 5px;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.logo {
+    display: flex;
+    border: blueviolet 1px solid;
+    height: 100px;
+    min-height: 220px !important;
+    min-width: 220px;
+}
+
+.wrapper {
+    align-items: center;
+    background: url(./../../../assets/img/Caso_Practico_Fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat repeat-y ;
+    height: auto !important;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.5);
+}

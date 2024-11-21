@@ -1,0 +1,14 @@
+section {
+    background: url(./../../../assets/img/error-404.jpg) no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    max-width: 100%;
+    min-height: 911px;
+    height: 100% !important;
+}
+
+.btn-pc {
+    left: 40%;
+    margin-top: 38%;
+}

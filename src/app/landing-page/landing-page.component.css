@@ -1,0 +1,85 @@
+/*******************************************************************************/
+.example-container {
+    background: url(./../../assets/img/Caso_Practico_Interior_3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat repeat-y ;
+    height: 100%;
+    /* max-height: 100%; */
+    /* min-height: 800px; */
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.content {
+    background-color: #dede;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    padding: 20px;
+    max-width: 100%;
+    min-height: 600px;
+}
+
+.mat-sidenav {
+    width: 250px;
+    background-color: #d2d2e7;
+}
+
+.sidenav-content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+footer {
+    background-color: #7c917e;
+    height: 150px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    a {
+        font-size: 12pt;
+    }
+}
+
+.material-icons.md-19 {
+    font-size: 20px !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+/*** Button ********************************************************************/
+ul {
+    list-style: none;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    min-width: 200px !important;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.stb {
+    background-color: #385874;
+    color: #ffffff !important;
+}

@@ -1,0 +1,52 @@
+<div class="wrapper">
+    @if (!loading) {
+        <div class="body">
+            <form action="">
+                <h1>Registro</h1>
+                <img src="../../../ts/image/Login1.png" />
+                <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                    <mat-form-field appearance="outline" style="width: 47%">
+                        <mat-label>Nombre(s)</mat-label>
+                        <input matInput type="text" placeholder="Escriba su o sus nombres" id="floatingName" [(ngModel)]="name" name="name">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 47%">
+                        <mat-label>Apellido(s)</mat-label>
+                        <input matInput type="text" placeholder="Escriba su o sus apellidos" id="floatingLastname" [(ngModel)]="lastname" name="lastname">
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Credencial</mat-label>
+                    <input matInput type="text" placeholder="Anote el número de su credencial" id="floatingCredential" [(ngModel)]="credential" name="credential">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Correo Electrónico</mat-label>
+                    <input matInput type="email" placeholder="nombre@ejemplo.com" id="floatingEmail" [(ngModel)]="email" name="email">
+                </mat-form-field>
+                <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                    <mat-form-field appearance="outline" style="width: 47%">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Escriba la contraseña" id="floatingPassword" [(ngModel)]="password" name="password">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 47%">
+                        <mat-label>Repetir Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Repita la contraseña" id="floatingRepeatPassword" [(ngModel)]="repeatPassword" name="repeatPassword">
+                    </mat-form-field>
+                </div>
+                <p>&nbsp;</p>
+                <mat-divider></mat-divider>
+                <section>
+                    <div class="example-button-row">
+                        <button mat-flat-button (click)="addUser()">Enviar Datos</button>
+                    </div>
+                </section>
+                <mat-divider></mat-divider>
+                <div>
+                    <p>¡Ya tengo cuenta! <a routerLink="/logIn">Iniciar Sesión</a></p>
+                </div>
+            </form>
+        </div>
+    } @else if (loading) {
+        <app-spinner></app-spinner>
+    }
+    <!-- <app-spinner *ngIf="loading"></app-spinner> -->
+</div>
